@@ -1,0 +1,9 @@
+[submodule "externals/MonoGame"]
+	path = externals/MonoGame
+	url = https://github.com/dmanning23/MonoGame.git
+[submodule "externals/FontBuddy"]
+	path = externals/FontBuddy
+	url = https://github.com/dmanning23/FontBuddy.git
+[submodule "externals/MicBuddy"]
+	path = externals/MicBuddy
+	url = git@bitbucket.org:the_dannobot/micbuddy.git
