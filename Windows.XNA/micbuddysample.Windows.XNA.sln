@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicBuddySample.Windows.XNAC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontBuddy.Windows.XNA", "..\externals\FontBuddy\Windows.XNA\FontBuddy.Windows.XNA.csproj", "{72F572D0-338C-45EB-AB95-45F8EAFF5A7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicBuddy.Windows.XNA", "..\externals\MicBuddy\Windows.XNA\MicBuddy.Windows.XNA.csproj", "{63856741-B767-4667-AB66-D17EE9FF947E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -23,6 +25,10 @@ Global
 		{72F572D0-338C-45EB-AB95-45F8EAFF5A7D}.Debug|x86.Build.0 = Debug|x86
 		{72F572D0-338C-45EB-AB95-45F8EAFF5A7D}.Release|x86.ActiveCfg = Release|x86
 		{72F572D0-338C-45EB-AB95-45F8EAFF5A7D}.Release|x86.Build.0 = Release|x86
+		{63856741-B767-4667-AB66-D17EE9FF947E}.Debug|x86.ActiveCfg = Debug|x86
+		{63856741-B767-4667-AB66-D17EE9FF947E}.Debug|x86.Build.0 = Debug|x86
+		{63856741-B767-4667-AB66-D17EE9FF947E}.Release|x86.ActiveCfg = Release|x86
+		{63856741-B767-4667-AB66-D17EE9FF947E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

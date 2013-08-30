@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicTest", "MicTest.csproj", "{B90AA090-6E9C-48C4-904A-E112EEB6F92F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicBuddySample", "MicBuddySample.csproj", "{B90AA090-6E9C-48C4-904A-E112EEB6F92F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lidgren.Network.Windows", "..\externals\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.Windows.csproj", "{AE483C29-042E-4226-BA52-D247CE7676DA}"
 EndProject
@@ -39,6 +39,6 @@ Global
 		{B90AA090-6E9C-48C4-904A-E112EEB6F92F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MicTest.csproj
+		StartupItem = MicBuddySample.csproj
 	EndGlobalSection
 EndGlobal

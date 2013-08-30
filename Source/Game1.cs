@@ -7,37 +7,36 @@ using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Input;
 using System.Diagnostics;
 using FontBuddyLib;
-using MicBuddy;
+using MicBuddyLib;
 using System.Collections.Generic;
 
-namespace MicTest
+namespace MicBuddySample
 {
 	/// <summary>
 	/// This is the main type for your game
 	/// </summary>
 	public class Game1 : Game
 	{
+		#region Fields
+
 		GraphicsDeviceManager graphics;
+
 		SpriteBatch spriteBatch;
-
-		#region Audio Out
-
-		#endregion
-
-		#region Audio In
-
-		//Create the audio in component
-		List<Microphone> microphones = new List<Microphone>();
 
 		FontBuddy font = new FontBuddy();
 
+		//Create the audio in component
+		List<MicBuddy> microphones = new List<MicBuddy>();
+
 		#endregion
+
+		#region Methods
 
 		public Game1()
 		{
 			graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
-			graphics.IsFullScreen = true;
+			graphics.IsFullScreen = false;
 		}
 
 		/// <summary>
@@ -55,7 +54,7 @@ namespace MicTest
 
 		protected override void OnExiting(object sender, EventArgs args)
 		{
-			foreach (Microphone mic in microphones)
+			foreach (MicBuddy mic in microphones)
 			{
 				mic.StopRecording();
 			}
@@ -76,10 +75,10 @@ namespace MicTest
 			font.Font = Content.Load<SpriteFont>("ArialBlack24");
 
 			//Initialize the Microphone using the default microphone
-			Microphone.EnumerateMicrophones();
-			foreach (string mic in Microphone.AvailableMicrophones)
+			MicBuddy.EnumerateMicrophones();
+			foreach (string mic in MicBuddy.AvailableMicrophones)
 			{
-				Microphone dude = new Microphone(mic);
+				MicBuddy dude = new MicBuddy(mic);
 				dude.MicSensitivity = 0.1f;
 				dude.StartRecording();
 				microphones.Add(dude);
@@ -116,7 +115,7 @@ namespace MicTest
 
 			//write all the available microphones
 			Vector2 pos = new Vector2(0.0f, 0.0f);
-			foreach (Microphone mic in microphones)
+			foreach (MicBuddy mic in microphones)
 			{
 				Color drawColor = mic.IsTalking ? Color.Green : Color.Red;
 				//write the mic name
@@ -157,6 +156,7 @@ namespace MicTest
             
 			base.Draw(gameTime);
 		}
+
+		#endregion //Methods
 	}
 }
-

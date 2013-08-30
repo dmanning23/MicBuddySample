@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 #endregion
 
-namespace MicTest
+namespace MicBuddySample
 {
     static class Program
     {

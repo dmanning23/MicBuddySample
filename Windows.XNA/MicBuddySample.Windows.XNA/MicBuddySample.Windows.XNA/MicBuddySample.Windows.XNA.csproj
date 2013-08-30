@@ -122,6 +122,10 @@
       <Project>{72F572D0-338C-45EB-AB95-45F8EAFF5A7D}</Project>
       <Name>FontBuddy.Windows.XNA</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\externals\MicBuddy\Windows.XNA\MicBuddy.Windows.XNA.csproj">
+      <Project>{63856741-B767-4667-AB66-D17EE9FF947E}</Project>
+      <Name>MicBuddy.Windows.XNA</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MicBuddySample.Windows.XNAContent\MicBuddySample.Windows.XNAContent.contentproj">
       <Name>MicBuddySample.Windows.XNAContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
