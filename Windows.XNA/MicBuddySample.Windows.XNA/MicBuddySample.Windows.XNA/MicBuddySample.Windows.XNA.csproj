@@ -107,6 +107,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\Source\Game1.cs">
+      <Link>Game1.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
@@ -115,6 +118,10 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\externals\FontBuddy\Windows.XNA\FontBuddy.Windows.XNA.csproj">
+      <Project>{72F572D0-338C-45EB-AB95-45F8EAFF5A7D}</Project>
+      <Name>FontBuddy.Windows.XNA</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MicBuddySample.Windows.XNAContent\MicBuddySample.Windows.XNAContent.contentproj">
       <Name>MicBuddySample.Windows.XNAContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
