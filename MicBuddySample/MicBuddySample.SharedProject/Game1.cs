@@ -10,6 +10,9 @@ using FontBuddyLib;
 using MicBuddyLib;
 using System.Collections.Generic;
 using GameTimer;
+using Plugin.Permissions;
+using System.Threading.Tasks;
+using Plugin.Permissions.Abstractions;
 
 namespace MicBuddySample
 {
@@ -51,6 +54,9 @@ namespace MicBuddySample
 		protected override void Initialize()
 		{
 			// TODO: Add your initialization logic here
+
+			
+
 			base.Initialize();
 		}
 
@@ -65,6 +71,8 @@ namespace MicBuddySample
 
 			//TODO: use this.Content to load your game content here 
 
+			Task.Run(() => GetMicPermission());
+
 			font.Font = Content.Load<SpriteFont>("ArialBlack24");
 
 			foreach (var mic in _mics.AvailableMicrophones)
@@ -73,6 +81,28 @@ namespace MicBuddySample
 			}
 
 			_clock.Start();
+		}
+
+		protected async Task<bool> GetMicPermission()
+		{
+//#if __IOS || ANDROID
+			try
+			{
+				var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Microphone);
+				if (status != PermissionStatus.Granted)
+				{
+					var results = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Microphone);
+					status = results[Permission.Location];
+				}
+
+				return (status == PermissionStatus.Granted);
+			}
+			catch (Exception)
+			{
+			}
+
+			return false;
+			//#endif
 		}
 
 		protected override void OnExiting(object sender, EventArgs args)
